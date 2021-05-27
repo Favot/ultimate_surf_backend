@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "materials",
+  "info": {
+    "name": "material"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "color": {
+      "type": "string"
+    }
+  }
+}

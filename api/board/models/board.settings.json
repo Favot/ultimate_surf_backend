@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boards",
+  "info": {
+    "name": "board",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "model": {
+      "type": "string",
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "shape_3d": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "shortboard",
+        "longboard",
+        "hybrid",
+        "softboard"
+      ],
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "model"
+    },
+    "material_id": {
+      "model": "material"
+    },
+    "size_ids": {
+      "collection": "size"
+    }
+  }
+}
