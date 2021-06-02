@@ -1,4 +1,4 @@
-import { parse } from "pg-connection-string";
+const parse = require("pg-connection-string").parse;
 
 export default ({ env }) => {
   if (env("NODE_ENV") === "production") {
@@ -23,7 +23,7 @@ export default ({ env }) => {
       },
     };
   }
-
+  // if we still in development mode we use sqlite
   return {
     defaultConnection: "default",
     connections: {
