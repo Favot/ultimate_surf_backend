@@ -23,7 +23,7 @@ export default ({ env }) => {
       },
     };
   }
-
+  // if we still in development mode we use sqlite
   return {
     defaultConnection: "default",
     connections: {
