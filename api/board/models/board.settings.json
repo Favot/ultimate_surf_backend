@@ -71,6 +71,9 @@
     },
     "size_ids": {
       "collection": "size"
+    },
+    "short_description": {
+      "type": "string"
     }
   }
 }
